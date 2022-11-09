@@ -1,4 +1,4 @@
-# raas
+# RAAS
 Random As A Service (RAAS) powered by chainlink. RAAS provides chainlink verifiable Random Function as a simple REST api. RAAS abstracts the complexity of integrating
 chainlink services, blockchain technology and decentralized application frontend integration. To use RAAS, there is no need to have a crypto wallet or even crypto itself.
 ## Demo
@@ -14,18 +14,19 @@ You will find the api specification and documentation.\
 You can create an account with a username, password and dummy email\
 You can also use the demo user:\
 username: demo\
-password: demo\
+password: demo
 
 ## Request RandomWords
-To make the post request, you must first be authenticated.\
+To make the post request, you must first be authenticated.
 
 The request takes two parameters:\
 numWords: int (1-10)\
-callBackUrl: string | use
+callBackUrl: string\
+You can use the demo callBackUrl or provide your own.
 ```
 "https://raasdemo.deta.dev/fulfilment"
 ```
-The repsonse is a json object on success and error 500 on error:\
+The response is a json object on success and error 500 on error:\
 Sample response: 
 ```
 {"accepted":true,
@@ -60,7 +61,7 @@ if x_raas_signature == computed_sig:
   .
 ```
 ## Verification
-There are four ways to view the returned random words / number.\
+There are four ways to view the returned random words / number.
 1. main api
 ```
 https://raas.deta.dev/draws
